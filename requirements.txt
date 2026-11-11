@@ -1,0 +1,18 @@
+loguru
+mkdocs
+pip
+python-dotenv
+ruff
+tqdm
+typer
+ipykernel
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+scikit-learn
+pyyaml
+feature-engine
+joblib
+-e .
