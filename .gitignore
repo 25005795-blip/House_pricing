@@ -5,6 +5,11 @@
 /models/*
 !/models/.gitkeep
 
+# MLflow (tracking local: runs, Model Registry y artefactos)
+mlflow.db
+/mlruns/
+/mlartifacts/
+
 # Mac OS-specific storage files
 .DS_Store
 

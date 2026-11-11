@@ -65,6 +65,12 @@ data: requirements
 	$(PYTHON_INTERPRETER) house_pricing/dataset.py
 
 
+## Open the MLflow UI (runs, metrics and Model Registry)
+.PHONY: mlflow_ui
+mlflow_ui:
+	mlflow ui --backend-store-uri sqlite:///mlflow.db
+
+
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################
