@@ -15,4 +15,5 @@ scikit-learn
 pyyaml
 feature-engine
 joblib
+mlflow
 -e .
