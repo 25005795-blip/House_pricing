@@ -1,5 +1,6 @@
 """Utilidades de MLflow compartidas por los notebooks de entrenamiento e inferencia."""
 
+from datetime import datetime
 import os
 import warnings
 
@@ -16,6 +17,11 @@ def _silenciar_ruido_mlflow() -> None:
     # Al registrar los datasets crudos: sus columnas enteras ya se declaran como float en la firma del modelo
     warnings.filterwarnings("ignore", message=r"Hint: Inferred schema contains integer column")
     warnings.filterwarnings("ignore", message=r"The specified dataset source can be interpreted in multiple ways")
+
+
+def nombre_run(prefijo: str) -> str:
+    """Nombre de run con la fecha y hora de ejecución, p. ej. `torneo_20261110_195431`."""
+    return f"{prefijo}_{datetime.now():%Y%m%d_%H%M%S}"
 
 
 def configurar_mlflow(nombre_experimento: str) -> Experiment:
